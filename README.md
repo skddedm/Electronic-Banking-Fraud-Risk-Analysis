@@ -51,4 +51,56 @@ For example: the average transaction amount of each customer was calculated and 
 * Fraudsters continuously change tactics to evade detection rules. Historical datasets may not reflect current or emerging fraud patterns.
 * Strict privacy laws and internal policies limit access to sensitive data. Analysts may work with authorised datasets only.
 
+# 3.0 Project Findings
+After analysing the generated datasets, six (6) fraud risk areas were identified as follows: 
+* 1,429 transactions were identified as unusual. The total value exposed with this risk is $10,701,598.31
+* 1,357 transactions are identified at risk with the use of password or PIN only. $6,924,532.16 is value is at risk. 
+* 1,421 transactions with 3 or more failed login attempts are a risk with $7,204,121.31 worth of transactions
+* 1,505 transactions were identified as risky locations with $7,657,142.54 exposed. 
+* 706 transactions and $3,544,286.50 have been identified to be at risk based on account type usage.
+* 527 transactions and $2,763,645.81 are at risk based on merchant category.
+
+A summary of the outcome is shown in the dash board  below:
+<img width="828" height="350" alt="image" src="https://github.com/user-attachments/assets/e78a69a4-1fde-42ac-9b7e-fe234f424fd0" />
+
+### 3.1 Root Causes of Vulnerabilities with Electronic Banking:
+* Weak authentication and access controls. The electronic products of the bank work on different platforms connected over the internet. A weak password policy, weak multi-factor authentication and inadequate session management can cause some of these fraud risks to occur. 
+* Inadequate transaction monitoring and fraud detection. Fraud events are dynamic with time, hence static rules and poor alert escalation will not help the bank adapt to and detect new fraud patterns.
+* Vulnerabilities in applications and infrastructure security. Architectural weaknesses in applications and IT infrastructure security can occur with outdated software, unpatched systems, weak encryption implementation and insecure API connecting banking systems.
+* Non-compliance with security standards. The bank may have improper network segregation, or weak logging and monitoring of card transactions as recommended by NIST SP-800r5, or inadequate protection of cardholder data as recommended by PCI-DSS.
+* Limited user awareness and social engineering controls. The bank may not have created enough awareness for their customers about social engineering and security practices required to stay safe while using the bank’s electronic platforms. The staff of the bank may also not have adequate training or education regarding security and privacy trends to protecting customers. 
+
+### 3.2 Risk Impact to the Bank
+Related fraud with the use of electronic banking products could result in the following risks:
+* Financial loss to the customers and bank. Unauthorized withdrawals could cause loss of customers while reimbursement and charge back will cost the bank’s in the fraud event.
+* Regulatory and compliance risk. The fraud event could trigger regulatory findings for breach with consumer protection laws which may result in fines or stricter supervision conditions. 
+* Customer experience and reputation risk. Customers may lose trust in the bank with their fraud experiences particularly, if the same fraud trend continues
+* Operational disruption. To resolve fraud occurrences, emergency shutdowns and high volumes of customer complaints will increase workload for fraud and customer support teams taking up existing financial resources, IT resources, human resources and time.  
+* Control breakdown and inefficiencies. The need to correct errors will result in increased human intervention which may result in more errors and dire impacts. 
+* Legal and liability risk. Customers may embark on lawsuits. Unbearable numbers of such lawsuits could shut down the bank’s operations.
+
+# 4.0 Details of Risk Areas Identified
+### Unusual Transaction Amount 
+The average transaction of each customer is compared to individual transactions performed by that same customer. Risk is identified where the actual transaction is greater than the average transaction amount for the same customer. It shows an unusual pattern traceable to the customer. 2836 transactions were identified as unusual. The total value exposed with this risk is $14,292,391.45
+|Row Labels         |Count of Transactios ID|Sum of Transaction Amount|
+|-------------------|-----------------------|-------------------------|
+|unusual transaction|2836                   |14292391.45              |
+|usual trannsaction |14                     |82338.22                 |
+|total              |2850                   |14374729.67              |
+
+### 4.1 Risky Authentication Type
+Biometric and OTP are more secure authentications than passwords or PIN because they involve a direct involvement of the actual customer to validate. 1,357 transactions are identified at risk with the use of password or PIN only because they can easily be acquired by unauthorized users. $6,924,532.16 is value is at risk. 
+|Row Labels         |Count of Transactios ID|Sum of Transaction Amount|
+|-------------------|-----------------------|-------------------------|
+|biometric          |733                    |3619901.59               |
+|OTP                |760                    |3830295.92               |
+|password           |687                    |3593655.98               |
+|PIN                |670                    |3330876.18               |
+|total              |2850                   |14374729.67              |
+
+### 4.2 Failed Login Attempts
+1,421 transactions with 3 or more failed login attempts are a risk because the actual customer is likely to recall their login credentials by the second attempt. $7,204,121.31 worth of transactions is at risk
+
+
+
 
