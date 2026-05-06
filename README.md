@@ -128,9 +128,77 @@ Where the country of residence differs from the country of transaction and the a
 |unsafe location           |1,505                  |7,657,142.54             |
 |total                     |2,850                  |14,374,729.67            |
 
+### 4.4 Account Type Usage Risk
+Checking accounts, credit cards and debit cards are usually transactional in nature but an ATM or POS usage on savings accounts exposes risk with the inappropriate account usage which defeats the savings purpose of that account. 706 transactions and $3,544,286.50 have been identified to be at risk based on account type usage.
+|Row Labels         |ATM   |Internet Banking |Mobile App |Online Banking |POS | Total |
+|-------------------|------|-----------------|-----------|---------------|----|-------|
+|checking           |373   |1                |376        |338            |330 |1,418  |
+|credit card        |8     |8                |7          |-              |9   |32     |
+|debit card         |10    |4                |4          |-              |5   |23     |
+|savings            |364   |5                |355        |311            |342 |1,377  |
+|total              |755   |18               |742        |649            |686 |2,850  |
 
+### 4.5 Merchant Category Riskiness
+If the country of residence differs from the country of transaction and the merchant category is either electronics or travel, risk is higher. A customer will highly plan purchases of an electronic or travel nature and will usually perform such transactions from their country of residence. When electronic or travel expenses are paid from outside the country of residence, there is some level of risk that it may not be the actual customer of the bank performing that transaction. $2,763,645.81 and 527 transactions are at risk based on merchant category.
 
+```Excel
+=IF(AND([@Country_of_Residence]<>[@Country_of_Transaction],OR([@Merchant_Category]="Electronics",[@Merchant_Category]="Travel")),"unsafe merchant transaction","safe merchant transaction")
+```
 
+|Row Labels                  |Count of Transactios ID|Sum of Transaction Amount|
+|----------------------------|-----------------------|-------------------------|
+|safe merchant transaction   |2,323                  |11,611,083.86            |
+|unsafe merchant transaction |527                    |2,763,645.81             |
+|total                       |2,850                  |14,374,729.67            |
 
+# 5.0 Risk Metrics
+The risk metrics is defined by the risk level rating, likelihood rating and impact rating. 
+
+### 5.1 Risk Level
+Risk level rating is defined by the likelihood rating and impact rating of each risk area.
+
+| Risk Level | Rating    |
+|------------|-----------|
+|Low Risk	   |2 and below|
+|Medium Risk |3 - 4      |
+|High Risk   |5 and above|
+
+### 5.2 Likelihood
+Defined as the possibility of the risk area occurring. The number of the affected overdraft expressed as a percentage of the total number of overdraft approvals defines the likelihood.
+|Likelihood   |Percentage         |Rating|
+|-------------|-------------------|------|
+|Unlikely     |Less than 5%       |1     |
+|Likely       |Between 6% and 40% |2     |
+|Very Likely  |Higher than 40%    |3     |
+
+### 5.3 Impact
+Defined as the overdraft amount value that can be affected in relation to the expressed likelihood. 
+|Impact Severity |Financial Impacted               |Rating      |Investigation and Resolution Timeline|
+|----------------|---------------------------------|------------|-------------------------------------|
+|Minor           |Less than $1,000,000             |1           |Up to 2 months                       |
+|Serious         |Between $1,000,001 and $3,000,000|2           |Up to 1 month                        |
+|Major           |Higher than $3,000,000           |3           |Up to 1 week                         |
+
+### 5.4 Fraud Risk Areas Assessment Summary
+The six (6) weaknesses identified have been assessed in the table below:
+|Risk Category                 |Likelihood Rating |Financial Impact Severity  | Risk Rating (likelihood rating + financial impact rating)|Risk Level|
+|------------------------------|------------------|---------------------------|----------------------------------------------------------|----------|
+|unusual transaction amount    |3                 |2                          |5                                                         |High      |
+|risky authentication type     |3                 |3                          |6                                                         |High      |
+|failed login attempts         |3                 |3                          |6                                                         |High      |
+|risky location                |3                 |3                          |6                                                         |High      |
+|account usage risk            |2                 |3                          |5                                                         |High      |
+|merchant category risk        |2                 |2                          |4                                                         |Medium    |
+
+# 6.0 Risk Areas and Required Strategies
+Due to scarce resources and budget constraints, the assessed risk areas must be prioritized considering the overall risk rating and the impact severity amounts. Controls to assist prevent, detect and correct the identified risk areas using the NIST SP 800-53r5 have been recommended.
+|Risk Category          |Recommended Controls based on NIST SP 800-53r5  | Implementation Timelines       |Estimated Post Control Implementation Risk Level|
+|-----------------------|------------------------------------------------|--------------------------------|------------------------------------------------|
+|risk location transactions, risky merchant transactions,  |AC-18: wireless access
+
+failed login attempts risks
+risky authentication type  
+unsual transaction amount  
+account usage risk        
 
 
