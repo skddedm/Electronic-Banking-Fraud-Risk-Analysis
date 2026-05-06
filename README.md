@@ -1,3 +1,8 @@
+# Table of Content
+- [1.0 Executive Summary](#1.0-executive-summary)
+
+
+
 # 1.0 Executive Summary
 Banks deploy electronic banking services such as mobile applications, internet banking, debit/credit cards to increase convenience for customers and create value for the bank, but vulnerabilities and cyber threats can cause fraud to occur.
 
@@ -192,13 +197,7 @@ The six (6) weaknesses identified have been assessed in the table below:
 
 # 6.0 Risk Areas and Required Strategies
 Due to scarce resources and budget constraints, the assessed risk areas must be prioritized considering the overall risk rating and the impact severity amounts. Controls to assist prevent, detect and correct the identified risk areas using the NIST SP 800-53r5 have been recommended.
-|Risk Category          |Recommended Controls based on NIST SP 800-53r5  | Implementation Timelines       |Estimated Post Control Implementation Risk Level|
-|-----------------------|------------------------------------------------|--------------------------------|------------------------------------------------|
-|risk location transactions, risky merchant transactions,  |AC-18: wireless access
+<img width="668" height="645" alt="image" src="https://github.com/user-attachments/assets/1e70155c-47a8-41b0-81b4-4d0294b2ad63" />
 
-failed login attempts risks
-risky authentication type  
-unsual transaction amount  
-account usage risk        
 
 
