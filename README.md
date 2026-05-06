@@ -82,24 +82,54 @@ Related fraud with the use of electronic banking products could result in the fo
 # 4.0 Details of Risk Areas Identified
 ### Unusual Transaction Amount 
 The average transaction of each customer is compared to individual transactions performed by that same customer. Risk is identified where the actual transaction is greater than the average transaction amount for the same customer. It shows an unusual pattern traceable to the customer. 2836 transactions were identified as unusual. The total value exposed with this risk is $14,292,391.45
+
+``` Excel
+=IF([@Transaction_Amount]<=[@avg_transaction_amount],"usual transaction","unusual transaction")
+```
+
 |Row Labels         |Count of Transactios ID|Sum of Transaction Amount|
 |-------------------|-----------------------|-------------------------|
-|unusual transaction|2836                   |14292391.45              |
-|usual trannsaction |14                     |82338.22                 |
-|total              |2850                   |14374729.67              |
+|unusual transaction|2836                   |14,292,391.45            |
+|usual trannsaction |14                     |82,338.22                |
+|total              |2850                   |14,374,729.67            |
 
 ### 4.1 Risky Authentication Type
 Biometric and OTP are more secure authentications than passwords or PIN because they involve a direct involvement of the actual customer to validate. 1,357 transactions are identified at risk with the use of password or PIN only because they can easily be acquired by unauthorized users. $6,924,532.16 is value is at risk. 
 |Row Labels         |Count of Transactios ID|Sum of Transaction Amount|
 |-------------------|-----------------------|-------------------------|
-|biometric          |733                    |3619901.59               |
-|OTP                |760                    |3830295.92               |
-|password           |687                    |3593655.98               |
-|PIN                |670                    |3330876.18               |
-|total              |2850                   |14374729.67              |
+|biometric          |733                    |3,619,901.59             |
+|OTP                |760                    |3,830,295.92             |
+|password           |687                    |3,593,655.98             |
+|PIN                |670                    |3,330,876.18             |
+|total              |2,850                  |14,374,729.67            |
 
 ### 4.2 Failed Login Attempts
 1,421 transactions with 3 or more failed login attempts are a risk because the actual customer is likely to recall their login credentials by the second attempt. $7,204,121.31 worth of transactions is at risk
+|Row Labels         |Count of Transactios ID|Sum of Transaction Amount|
+|-------------------|-----------------------|-------------------------|
+|0                  |465                    |2,394,557.5              |
+|1                  |468                    |2,326,748.99             |
+|2                  |496                    |2,449,301.87             |
+|3                  |449                    |2,384,244.24             |
+|4                  |470                    |2,321,440.11             |
+|5                  |502                    |2,498,436.96             |
+|total              |2,850                  |14,374,729.67            |
+
+### 4.3 Risky Location Transaction
+Where the country of residence differs from the country of transaction and the authentication type is neither biometric nor OTP, the geographical location is risky with the transaction performed. Biometric and OTP give reasonable assurance that the customer is performing the transactions themselves away from where the bank knows them on record to reside. 1,505 transactions were identified as risky locations with $7,657,142.54 exposed. 
+ 
+ ``` excel
+=IF(AND([@Country_of_Residence]<>[@Country_of_Transaction],OR([@Authentication_Type]="Biometric",[@Authentication_Type]="OTP")),"safe location transaction","unsafe location transaction")
+```
+
+|Row Labels                |Count of Transactios ID|Sum of Transaction Amount|
+|--------------------------|-----------------------|-------------------------|
+|safe location transaction |1,345                  |6,717,587.13             |
+|unsafe location           |1,505                  |7,657,142.54             |
+|total                     |2,850                  |14,374,729.67            |
+
+
+
 
 
 
