@@ -1,5 +1,6 @@
 # Table of Content
-- [1.0 Executive Summary](#1.0-executive-summary)
+* [1.0 Executive Summary](#1.0-executive-summary)
+* [# 2.0 Methodology](#2.0-Methodology)
 
 
 
