@@ -2,7 +2,8 @@
 * [1.0 Executive Summary](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#10-executive-summary)
 * [2.0 Methodology](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#20-methodology)
 * [3.0 Project Findings](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#20-methodology)
-* [4.0 Details of Risk Areas Identified](
+* [4.0 Details of Risk Areas Identified](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#40-details-of-risk-areas-identified)
+* [5.0 Risk Metrics](
 
 
 
