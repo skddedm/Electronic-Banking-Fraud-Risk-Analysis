@@ -4,7 +4,7 @@
 * [3.0 Project Findings](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#20-methodology)
 * [4.0 Details of Risk Areas Identified](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#40-details-of-risk-areas-identified)
 * [5.0 Risk Metrics](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#50-risk-metrics)
-* [6.0 6.0 Risk Areas and Required Strategies](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#60-risk-areas-and-required-strategies)
+* [6.0 Risk Areas and Required Strategies](https://github.com/skddedm/Electronic-Banking-Fraud-Risk-Analysis/blob/main/README.md#60-risk-areas-and-required-strategies)
 
 # 1.0 Executive Summary
 Banks deploy electronic banking services such as mobile applications, internet banking, debit/credit cards to increase convenience for customers and create value for the bank, but vulnerabilities and cyber threats can cause fraud to occur.
