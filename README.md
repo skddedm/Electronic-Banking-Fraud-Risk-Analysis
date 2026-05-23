@@ -200,7 +200,14 @@ The six (6) weaknesses identified have been assessed in the table below:
 
 # 6.0 Risk Areas and Required Strategies
 Due to scarce resources and budget constraints, the assessed risk areas must be prioritized considering the overall risk rating and the impact severity amounts. Controls to assist prevent, detect and correct the identified risk areas using the NIST SP 800-53r5 have been recommended.
-<img width="668" height="645" alt="image" src="https://github.com/user-attachments/assets/1e70155c-47a8-41b0-81b4-4d0294b2ad63" />
+| Risk Category | Recommended Controls Based on NIST SP 800-53r5 | Implementation Timelines | Estimated Post-Control Implementation Risk Level |
+|---|---|---|---|
+| **1. Risky Locations Transactions** | - AC-18: Wireless Access<br>- AC-19: Access Control for Mobile Devices<br>- AU-6: Audit Record Review, Analysis and Reporting<br>- AU-8: Time Stamps<br>- CA-3: Information Exchange<br>- CA-7: Continuous Monitoring<br>- CP-9: System Backup<br>- IA-3: Device Identification and Authentication<br>- IA-8: User Identification and Authentication<br>- RA-5: Vulnerability Monitoring and Scanning | Within 1 month<br><br>And<br><br>Up to weekly review and reporting | Low Risk Level |
+| **2. Risky Merchant Category Transaction** | - RA-7: Risk Response | Within 1 week<br><br>And<br><br>Monthly review and reporting | Low Risk Level |
+| **3. Failed Login Attempts Risk** | - AT-2: Literacy Training and Awareness<br>- CA-2: Control Assessments<br>- SC-12: Cryptographic Key Establishment and Management | Within 1 month<br><br>And<br><br>Monthly review and reporting | Low Risk Level |
+| **4. Risky Authentication Type** | - AT-2: Literacy Training and Awareness<br>- CA-2: Control Assessments<br>- SC-12: Cryptographic Key Establishment and Management | Within 1 month<br><br>And<br><br>Monthly review and reporting | Low Risk Level |
+| **5. Unusual Transaction Amount** | - CM-4: Impact Analyses<br>- RA-3: Risk Assessment | Within the next quarter<br><br>And<br><br>Quarterly review and reporting | Low Risk Level |
+| **6. Account Usage Risk** | - CP-2: Contingency Plan<br>- IR-8: Incident Response Plan | Within the next quarter<br><br>And<br><br>Annual review and reporting | Low Risk Level |
 
 
 
